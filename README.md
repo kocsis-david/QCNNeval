@@ -23,18 +23,18 @@ Az optimalizáláshoz Adam optimizálót használtunk, a célfüggvény pedig bi
 
 ### Kvantum Konvolúciós Neurális Hálózat
 
-A QCNN egy kvantum számítógépen futtatott hibrid modell, amely 10 kvantumbit (qubit) segítségével végzi az információ feldolgozását. A QCNN felépítése:
+A QCNN egy kvantum számítógépen futtatott hibrid modell, amely 10-12 kvantumbit (qubit) segítségével végzi az információ feldolgozását. A QCNN felépítése:
 
 1. **Qubit állapotok**: Minden pixel adatot qubit forgatási szöggé alakítunk.
 2. **Kvantum kapuk**: Minden qubit kap egy Rx és Ry forgatást, majd CNOT kapuk kapcsolják össze a qubitokat.
 
 A kvantumrétegek között a differenciálás az Adjoint módszer segítségével történik, ami hatékonyabb és gyorsabb.
 
-## Edzés és Értékelés
+## Tanítás és Kiértékelés
 
 A projekt két különálló modellt alkalmazott az alábbi beállítások szerint:
 
-- **QCNN**: 10 qubit, 3 rétegű kvantumkapu mélységgel, 50 epoch, 32-es batch méret.
+- **QCNN**: 12 qubit, 3 rétegű kvantumkapu mélységgel, 50 epoch, 32-es batch méret.
 - **Klasszikus NN**: 128 neuronos rejtett réteg, 50 epoch, 32-es batch méret.
 
 ### Eredmények
@@ -54,21 +54,10 @@ Az alábbi diagramok mutatják a két modell tanulási görbéit:
 
 ![Accuracy Diagram](Accuracy.png)
 
-## Telepítés és Futtatás
 
-1. Telepítse a következő függőségeket:
-   ```bash
-   pip install tensorflow tensorflow-quantum cirq sympy
-   ```
-2. Töltse le a CIFAR-10 adatbázist.
-3. Futtassa a `qcnn_vs_nn.py` fájlt:
-   ```bash
-   python qcnn_vs_nn.py
-   ```
+##Következtetés
 
-## Következtetés
-
-A QCNN ígéretes eredményeket mutatott a klasszikus módszerekkel szemben, különösen a kis adathalmazokon való edzés során. Ez a projekt kiemeli a kvantumszámítási technikák hatékonyságát bizonyos feladatokban, de további fejlesztések szükségesek a nagyobb adatbázisok és mélyebb modellek esetében.
+A QCNN teljesítménye nem haladta meg a klasszikus modellét, és az edzés is lassabb volt. Mindazonáltal a QCNN kevesebb paraméterrel dolgozott, ami potenciálisan előnyös lehet nagyobb adatbázisok és nagyobb számítási erőforrások használata esetén. Ez a projekt kezdeti lépéseket tesz a kvantumszámítási módszerek gyakorlati alkalmazása felé a neurális hálózatok területén.
 
 ---
 
