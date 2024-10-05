@@ -55,10 +55,8 @@ Az alábbi diagramok mutatják a két modell tanulási görbéit:
 ![Accuracy Diagram](Accuracy.png)
 
 
-##Következtetés
+## Következtetés
 
 A QNN teljesítménye nem haladta meg a klasszikus modellét, és az edzés is lassabb volt. Mindazonáltal a QNN kevesebb paraméterrel dolgozott, ami potenciálisan előnyös lehet nagyobb adatbázisok és nagyobb számítási erőforrások használata esetén. Ez a projekt kezdeti lépéseket tesz a kvantumszámítási módszerek gyakorlati alkalmazása felé a neurális hálózatok területén.
 
 ---
-
-Ez a README dokumentum áttekintést nyújt a projekt struktúrájáról és a két hálózat teljesítményének összehasonlításáról.
