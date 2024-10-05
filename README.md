@@ -1,10 +1,10 @@
 ---
 
-# Kvantum Konvolúciós Neurális Hálózat és Klasszikus Neurális Hálózat Összehasonlító Értékelés
+# Kvantum Neurális Hálózat és Klasszikus Neurális Hálózat Összehasonlító Értékelés
 
 ## Projekt Áttekintés
 
-Ez a projekt a kvantum konvolúciós neurális hálózat (QCNN) és egy klasszikus neurális hálózat (NN) teljesítményét hasonlítja össze a **CIFAR-10** képadatbázison, amely 10 különböző osztályú képet tartalmaz. A projekt célja annak vizsgálata, hogy a kvantuminformatikai módszerek hogyan teljesítenek azonos körülmények között egy hagyományos neurális hálózathoz képest.
+Ez a projekt a kvantum  neurális hálózat (QNN) és egy klasszikus neurális hálózat (NN) teljesítményét hasonlítja össze a **CIFAR-10** képadatbázison, amely 10 különböző osztályú képet tartalmaz. A projekt célja annak vizsgálata, hogy a kvantuminformatikai módszerek hogyan teljesítenek azonos körülmények között egy hagyományos neurális hálózathoz képest.
 
 ## Adatkészlet
 
@@ -21,9 +21,9 @@ A klasszikus modell egy egyszerű többrétegű perceptron, amely két sűrű r�
 
 Az optimalizáláshoz Adam optimizálót használtunk, a célfüggvény pedig bináris keresztentrópia volt.
 
-### Kvantum Konvolúciós Neurális Hálózat
+### Kvantum Neurális Hálózat
 
-A QCNN egy kvantum számítógépen futtatott hibrid modell, amely 10-12 kvantumbit (qubit) segítségével végzi az információ feldolgozását. A QCNN felépítése:
+A QNN egy kvantum számítógépen futtatott hibrid modell, amely 10-12 kvantumbit (qubit) segítségével végzi az információ feldolgozását. A QNN felépítése:
 
 1. **Qubit állapotok**: Minden pixel adatot qubit forgatási szöggé alakítunk.
 2. **Kvantum kapuk**: Minden qubit kap egy Rx és Ry forgatást, majd CNOT kapuk kapcsolják össze a qubitokat.
@@ -34,7 +34,7 @@ A kvantumrétegek között a differenciálás az Adjoint módszer segítségéve
 
 A projekt két különálló modellt alkalmazott az alábbi beállítások szerint:
 
-- **QCNN**: 12 qubit, 3 rétegű kvantumkapu mélységgel, 50 epoch, 32-es batch méret.
+- **QNN**: 12 qubit, 3 rétegű kvantumkapu mélységgel, 50 epoch, 32-es batch méret.
 - **Klasszikus NN**: 128 neuronos rejtett réteg, 50 epoch, 32-es batch méret.
 
 ### Eredmények
@@ -42,7 +42,7 @@ A projekt két különálló modellt alkalmazott az alábbi beállítások szeri
 Az alábbi diagramok mutatják a két modell tanulási görbéit:
 
 - **Veszteség (loss)**: Mind a kvantum, mind a klasszikus modell tanulási veszteségét ábrázolja az edzési és validációs adatokon.
-- **Pontosság (accuracy)**: A QCNN és a klasszikus NN teljesítménye az edzési és validációs adatokon.
+- **Pontosság (accuracy)**: A QNN és a klasszikus NN teljesítménye az edzési és validációs adatokon.
 
 ### Ábrák
 
@@ -57,7 +57,7 @@ Az alábbi diagramok mutatják a két modell tanulási görbéit:
 
 ##Következtetés
 
-A QCNN teljesítménye nem haladta meg a klasszikus modellét, és az edzés is lassabb volt. Mindazonáltal a QCNN kevesebb paraméterrel dolgozott, ami potenciálisan előnyös lehet nagyobb adatbázisok és nagyobb számítási erőforrások használata esetén. Ez a projekt kezdeti lépéseket tesz a kvantumszámítási módszerek gyakorlati alkalmazása felé a neurális hálózatok területén.
+A QNN teljesítménye nem haladta meg a klasszikus modellét, és az edzés is lassabb volt. Mindazonáltal a QNN kevesebb paraméterrel dolgozott, ami potenciálisan előnyös lehet nagyobb adatbázisok és nagyobb számítási erőforrások használata esetén. Ez a projekt kezdeti lépéseket tesz a kvantumszámítási módszerek gyakorlati alkalmazása felé a neurális hálózatok területén.
 
 ---
 
