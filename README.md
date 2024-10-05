@@ -48,15 +48,11 @@ Az alábbi diagramok mutatják a két modell tanulási görbéit:
 
 #### Veszteség Diagram
 
-![Loss Diagram](cifar10_classical_vs_quantum_loss.png)
+![Loss Diagram](Loss.png)
 
 #### Pontosság Diagram
 
-![Accuracy Diagram](cifar10_classical_vs_quantum_accuracy.png)
-
-### Végső Teszt Pontosság
-
-A teszt során a QCNN **0.68** pontosságot ért el, míg a klasszikus modell **0.67** pontosságot mutatott. Ez jelzi, hogy a kvantum számítási modell is képes a klasszikus módszerekkel versenyezni bizonyos problémákon.
+![Accuracy Diagram](Accuracy.png)
 
 ## Telepítés és Futtatás
 
